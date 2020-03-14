@@ -58,7 +58,14 @@ export default class Game extends Component {
         if (winner) {
             status = 'ผู้ชนะคือ ' + winner;
         } else {
-            status = 'ตาของ ' + (this.state.xIsNext ? 'X' : 'O');
+            if(this.state.stepNumber==9)
+            {
+                status = 'เสมอ'
+            }
+            else
+            {
+                status = 'ตาของ ' + (this.state.xIsNext ? 'X' : 'O');
+            }            
         }
 
 
